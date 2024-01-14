@@ -10,7 +10,7 @@ function App() {
   },[query,page,fetchScrollData])
 
   const updatedScrollData = () =>{
-    /*data.map((node,index) => ((
+    data.map((node,index) => ((
         index === data.length -1 ? (
         setPage(page+1),
         setQuery(query),
@@ -23,7 +23,6 @@ function App() {
         )
       )
     ))
-    */
   }
   return (
     <div className="App">
