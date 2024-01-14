@@ -30,7 +30,7 @@ const Filters = () => {
           name="group1"
           type="radio"
           id={`inline-2`}
-         /* onChange={() =>
+         /*onChange={() =>
             productDispatch({
               type: "SORT_BY_PRICE",
               payload: "highToLow",

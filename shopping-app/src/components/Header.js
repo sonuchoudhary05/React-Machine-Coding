@@ -3,11 +3,17 @@ import NavbarBrand from 'react-bootstrap/esm/NavbarBrand';
 import Container from 'react-bootstrap/Container';
 import FormControl from 'react-bootstrap/FormControl';
 import {FaShoppingCart} from "react-icons/fa";
+import { CartState } from '../Context/context';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Nav from 'react-bootstrap/Nav';
 import Badge from 'react-bootstrap/Badge';
 import { NavLink } from 'react-router-dom';
 function Header() {
+    const {
+        state: { cart },
+        dispatch,
+        productDispatch,
+      } = CartState();
     return (
        <Navbar bg="dark" variant="dark" style = {{height : 80}}>
         <Container>
@@ -22,7 +28,7 @@ function Header() {
                     <Dropdown.Toggle variant="success">
                         <FaShoppingCart color = "white" fontSize= "25px" />
                         <Badge>
-                            10
+                           {cart}
                         </Badge>
                     </Dropdown.Toggle>
 
