@@ -1,6 +1,6 @@
 const useTraverseTree = () => {
     function insertNode(tree, folderId, item, isFolder) {
-      if (tree.id == folderId && tree.isFolder) {
+      if (tree.id === folderId && tree.isFolder) {
         tree.items.unshift({
           id: new Date().getTime(),
           name: item,
